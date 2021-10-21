@@ -11,8 +11,8 @@
     <groupId>ru.digitalleague</groupId>
     <artifactId>test</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>my-taxi-service</name>
-    <description>my-taxi-service</description>
+    <name>test</name>
+    <description>test</description>
 
     <packaging>pom</packaging>
 
