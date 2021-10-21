@@ -2,6 +2,7 @@ package ru.digitalleague.core.service;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Transactional;
 import ru.digitalleague.core.api.TeacherService;
@@ -11,6 +12,7 @@ import ru.digitalleague.core.model.Teacher;
 @Slf4j
 @RequiredArgsConstructor
 public class TeacherServiceImpl implements TeacherService {
+    @Autowired
     private final TeacherMapper teacherMapper;
 
     @Override

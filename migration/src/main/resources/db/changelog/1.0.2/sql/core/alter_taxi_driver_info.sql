@@ -1,1 +1,0 @@
-alter table taxi_drive_info drop column middle_name;

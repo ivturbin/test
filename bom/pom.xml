@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>ru.digitalleague</groupId>
-        <artifactId>my-taxi-service</artifactId>
+        <artifactId>test</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <artifactId>bom</artifactId>

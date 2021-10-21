@@ -2,6 +2,7 @@ package ru.digitalleague.core.service;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Transactional;
 import ru.digitalleague.core.api.StudentService;
@@ -11,6 +12,7 @@ import ru.digitalleague.core.model.Student;
 @Slf4j
 @RequiredArgsConstructor
 public class StudentServiceImpl implements StudentService {
+    @Autowired
     private final StudentMapper studentMapper;
 
     @Override
