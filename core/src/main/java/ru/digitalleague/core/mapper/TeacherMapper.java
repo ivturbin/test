@@ -21,11 +21,13 @@ public interface TeacherMapper {
             @Result(property = "cafId", column = "caf_id"),
     })
     @Select("SELECT teacher_id, fio, caf_id FROM teachers")
-    List<Student> getAllTeachers();
+    List<Teacher> getAllTeachers();
 
     int insert(Teacher record);
 
     Teacher selectByPrimaryKey(Long teacherId);
 
     int updateByPrimaryKey(Teacher record);
+    @Select("SELECT * FROM teachers WHERE teachers.id = #{teacherId}")
+    Teacher getTeacherById(Long teacherId);
 }

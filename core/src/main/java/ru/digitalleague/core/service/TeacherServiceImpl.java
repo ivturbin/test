@@ -9,6 +9,8 @@ import ru.digitalleague.core.api.TeacherService;
 import ru.digitalleague.core.mapper.TeacherMapper;
 import ru.digitalleague.core.model.Teacher;
 
+import java.util.List;
+
 @Slf4j
 @RequiredArgsConstructor
 public class TeacherServiceImpl implements TeacherService {
@@ -26,8 +28,18 @@ public class TeacherServiceImpl implements TeacherService {
     }
 
     @Override
+    public List<Teacher> getAllTeachers() {
+        return teacherMapper.getAllTeachers();
+    }
+
+    @Override
     @Transactional(isolation = Isolation.READ_COMMITTED)
     public int updateByPrimaryKey(Teacher record) {
         return teacherMapper.updateByPrimaryKey(record);
+    }
+
+    @Override
+    public Teacher getTeacherById(long id) {
+        return teacherMapper.getTeacherById(id);
     }
 }

@@ -9,6 +9,8 @@ import ru.digitalleague.core.api.StudentService;
 import ru.digitalleague.core.mapper.StudentMapper;
 import ru.digitalleague.core.model.Student;
 
+import java.util.List;
+
 @Slf4j
 @RequiredArgsConstructor
 public class StudentServiceImpl implements StudentService {
@@ -26,9 +28,19 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
+    public List<Student> getAllStudents() {
+        return studentMapper.getAllStudents();
+    }
+
+    @Override
     @Transactional(isolation = Isolation.READ_COMMITTED)
     public int updateByPrimaryKey(Student record) {
         return studentMapper.updateByPrimaryKey(record);
+    }
+
+    @Override
+    public Student getStudentById(long id) {
+        return studentMapper.getStudentById(id);
     }
 
 }

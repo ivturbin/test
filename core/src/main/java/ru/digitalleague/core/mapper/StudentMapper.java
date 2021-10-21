@@ -28,4 +28,7 @@ public interface StudentMapper {
     Student selectByPrimaryKey(Long studentId);
 
     int updateByPrimaryKey(Student record);
+
+    @Select("SELECT * FROM students WHERE students.id = #{studentId}")
+    Student getStudentById(Long studentId);
 }
